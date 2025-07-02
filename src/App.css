@@ -1,0 +1,147 @@
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Controls Section */
+.controls-container {
+  padding: 16px;
+  border: 1px solid #ccc;
+  margin-bottom: 24px;
+}
+
+.controls-title {
+  font-size: 20px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.task-creation-section,
+.task-management-section {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.task-input,
+.selected-task-input {
+  flex: 1;
+  min-width: 160px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 14px;
+}
+
+.create-btn,
+.action-btn {
+  border: 1px solid #ccc;
+  background: none;
+  padding: 8px 12px;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.create-btn:disabled,
+.action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Board Styles */
+.board-container {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 12px;
+}
+
+.board-title {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.stages-container {
+  display: flex;
+  gap: 12px;
+  padding: 8px 0;
+  min-height: 200px;
+  overflow-x: auto;
+}
+
+/* Stage Styles */
+.stage-column {
+  flex: 1;
+  min-width: 180px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stage-header {
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.stage-tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+}
+
+/* Task Styles */
+.task-card {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  margin-bottom: 2px;
+}
+
+.task-button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 8px;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    padding: 8px;
+    margin: 8px;
+  }
+  .task-creation-section,
+  .task-management-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .stages-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .stage-column {
+    min-width: auto;
+    max-width: none;
+  }
+}
+
+/* Empty state */
+.empty-stage {
+  font-style: italic;
+  text-align: center;
+  padding: 8px;
+  border: 1px dashed #ccc;
+  border-radius: 2px;
+  color: #888;
+}
+
